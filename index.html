@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El-kretsen Widget — Demo</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap"
+    />
+    <style>
+      :root {
+        --elk-forest: #1f3d2e;
+        --elk-moss: #3a6b4f;
+        --elk-cream: #f4f1ea;
+        --elk-ink: #0e1a14;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: 'Barlow', system-ui, sans-serif;
+        background: linear-gradient(180deg, #f4f1ea 0%, #e8e4da 100%);
+        color: var(--elk-ink);
+        min-height: 100vh;
+      }
+      .nav {
+        background: var(--elk-forest);
+        color: var(--elk-cream);
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .nav-brand {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        letter-spacing: 0.05em;
+      }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        font-size: 0.95rem;
+      }
+      .hero {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 5rem 2rem 3rem;
+      }
+      .hero h1 {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 1.05;
+        margin: 0 0 1.5rem;
+        max-width: 18ch;
+      }
+      .hero p {
+        font-size: 1.15rem;
+        line-height: 1.6;
+        max-width: 60ch;
+        color: #2c3a30;
+      }
+      .grid {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+      .card {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      }
+      .card h3 {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 1.4rem;
+        margin: 0 0 0.75rem;
+      }
+      .demo-note {
+        max-width: 1100px;
+        margin: 1rem auto 4rem;
+        padding: 1rem 2rem;
+        font-size: 0.85rem;
+        color: #6b7280;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-brand">EL-KRETSEN</div>
+      <div class="nav-links">
+        <span>Producent</span>
+        <span>Avgifter</span>
+        <span>Insamling</span>
+        <span>Om oss</span>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <h1>Demo-sida för El-kretsen widget</h1>
+      <p>
+        Detta är en simulerad värdsida som efterliknar el-kretsen.se. Widgeten laddas
+        som en separat React-app i högra hörnet — på riktigt skulle den embeddas via
+        ett enskilt &lt;script&gt;-tag.
+      </p>
+    </section>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Producentansvar</h3>
+        <p>Information om regler och skyldigheter för producenter.</p>
+      </div>
+      <div class="card">
+        <h3>Avgifter 2026</h3>
+        <p>Aktuella avgifter och kategorier.</p>
+      </div>
+      <div class="card">
+        <h3>Insamlingsplatser</h3>
+        <p>Hitta närmaste återvinningsstation.</p>
+      </div>
+    </div>
+
+    <div class="demo-note">
+      ↘ Widgeten i hörnet är samma kod som kommer byggas till en script-bundle.
+    </div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
