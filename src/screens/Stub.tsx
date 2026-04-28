@@ -16,7 +16,7 @@ export function StubScreen({ navigate, icon: Icon, title, description, hint }: S
       <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-50 text-brand-500">
         <Icon size={22} strokeWidth={1.7} />
       </div>
-      <h2 className="mt-3 font-condensed text-2xl font-bold leading-tight text-ink-900">{title}</h2>
+      <h2 className="mt-3 font-condensed text-2xl font-bold uppercase leading-tight tracking-wide text-ink-900">{title}</h2>
       <p className="mt-2 text-sm leading-relaxed text-ink-600">{description}</p>
 
       <div className="mt-5 rounded-2xl border border-dashed border-brand-200 bg-brand-50/40 p-4">
@@ -27,7 +27,7 @@ export function StubScreen({ navigate, icon: Icon, title, description, hint }: S
       <div className="mt-auto pt-5">
         <button
           onClick={() => navigate('chat')}
-          className="flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-gradient px-4 py-3 text-sm font-semibold text-white transition hover:opacity-95"
+          className="flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-br from-brand-400 via-brand-500 to-brand-700 px-4 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:opacity-95"
         >
           <Sparkles size={15} strokeWidth={2} />
           Fråga ELvis under tiden
